@@ -10,7 +10,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; margin: 0; }
+body { background: var(--paper); color: var(--ink); font-family: Times New Roman, Georgia; margin: 0; }
 h1, h2, h3, p { margin-top: 0; }
 
 /* The dark opening lets the cyan Intel logo and accent color stand out. */
@@ -59,4 +59,59 @@ footer { border-top: 1px solid var(--line); color: #52687c; display: flex; font-
 	.timeline-item:nth-child(even) .timeline-card { bottom: auto; top: auto; }
 	.is-turning-point .timeline-card { border-left-color: var(--coral); }
 	footer { margin: 0 20px; padding-left: 0; padding-right: 0; }
+}
+
+/* Keep every card the same size */
+.timeline-card {
+	height: 280px;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Keep the photo in the top half of the card */
+.timeline-card img {
+    display: block;
+	height: 50%;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Keep the date and title visible in the bottom half */
+.card-heading {
+	background: white;
+	height: 50%;
+	padding: 18px 20px;
+}
+
+/* Hide the description over the photo */
+.card-info {
+    background: rgba(7, 29, 73, 1);
+    color: white;
+	height: 50%;
+	left: 0;
+    opacity: 0;
+    padding: 24px;
+    position: absolute;
+	right: 0;
+	top: 0;
+    transition: opacity .3s ease;
+}
+
+/* Show the information on hover or keyboard focus */
+.timeline-card:hover .card-info,
+.timeline-card:focus .card-info {
+    opacity: 1;
+}
+
+/* Make the description readable on the dark overlay */
+.card-info p {
+    color: white;
+}
+
+@media (max-width: 700px) {
+	.timeline-card,
+	.timeline-item:nth-child(even) .timeline-card {
+		height: 280px;
+		padding: 0;
+	}
 }
