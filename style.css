@@ -63,6 +63,8 @@ footer { border-top: 1px solid var(--line); color: #52687c; display: flex; font-
 
 /* Keep every card the same size */
 .timeline-card {
+  display: flex;
+  flex-direction: column;
 	height: 280px;
     overflow: hidden;
     padding: 0;
@@ -70,16 +72,14 @@ footer { border-top: 1px solid var(--line); color: #52687c; display: flex; font-
 
 /* Keep the photo in the top half of the card */
 .timeline-card img {
-    display: block;
-	height: 50%;
+  flex: 0 0 50%;
     object-fit: cover;
     width: 100%;
 }
 
 /* Keep the date and title visible in the bottom half */
 .card-heading {
-	background: white;
-	height: 50%;
+	flex: 1;
 	padding: 18px 20px;
 }
 
