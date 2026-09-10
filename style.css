@@ -55,8 +55,7 @@ footer { border-top: 1px solid var(--line); color: #52687c; display: flex; font-
 	.timeline-item, .timeline-item:nth-child(even) { margin-left: 0; padding-left: 54px; width: 100%; }
 	.timeline-item { display: flex; flex: none; height: auto; min-height: 0; }
 	.timeline-marker, .timeline-item:nth-child(even) .timeline-marker { left: 0; right: auto; top: 20px; transform: none; }
-	.timeline-card, .timeline-item:nth-child(even) .timeline-card { border-left: 4px solid var(--cyan); border-right: 0; margin: 0 0 30px; padding: 24px 20px; width: 100%; }
-	.timeline-item:nth-child(even) .timeline-card { bottom: auto; top: auto; }
+	.timeline-card, .timeline-item:nth-child(even) .timeline-card { border-left: 4px solid var(--cyan); border-right: 0; margin: 0 0 30px; padding: 0; position: relative; top: auto; bottom: auto; width: 100%; }
 	.is-turning-point .timeline-card { border-left-color: var(--coral); }
 	footer { margin: 0 20px; padding-left: 0; padding-right: 0; }
 }
@@ -116,5 +115,9 @@ footer { border-top: 1px solid var(--line); color: #52687c; display: flex; font-
 	.timeline-item:nth-child(even) .timeline-card {
 		height: 280px;
 		padding: 0;
+	}
+
+	.card-info {
+		height: 100%;
 	}
 }
