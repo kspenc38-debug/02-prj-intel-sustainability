@@ -50,10 +50,10 @@ footer { border-top: 1px solid var(--line); color: #52687c; display: flex; font-
 	.hero img { margin-bottom: 72px; width: 100px; }
 	main { padding: 72px 20px 50px; }
 	.timeline-intro { margin-bottom: 48px; }
-	.timeline { display: block; overflow-x: visible; padding: 10px 0; }
+	.timeline { display: flex; flex-direction: column; gap: 0; overflow-x: visible; padding: 10px 0; }
 	.timeline::before { height: auto; left: 20px; right: auto; top: 0; bottom: 0; width: 2px; }
 	.timeline-item, .timeline-item:nth-child(even) { margin-left: 0; padding-left: 54px; width: 100%; }
-	.timeline-item { display: flex; flex: none; height: auto; min-height: 0; }
+	.timeline-item { display: block; flex: none; height: auto; min-height: 0; }
 	.timeline-marker, .timeline-item:nth-child(even) .timeline-marker { left: 0; right: auto; top: 20px; transform: none; }
 	.timeline-card, .timeline-item:nth-child(even) .timeline-card { border-left: 4px solid var(--cyan); border-right: 0; margin: 0 0 30px; padding: 0; position: relative; top: auto; bottom: auto; width: 100%; }
 	.is-turning-point .timeline-card { border-left-color: var(--coral); }
